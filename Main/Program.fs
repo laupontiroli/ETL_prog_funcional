@@ -1,6 +1,7 @@
-
 open FSharp.Data
 open ETL.Types
+
+
 
 [<EntryPoint>]
 let main argv =
@@ -15,6 +16,11 @@ let main argv =
         CsvFile.Load(System.IO.Path.Combine(dataIn, "order_item.csv")).Rows
         |> Seq.map ETL.Transformations.rowToOrderItem
         |> Seq.toList
+
+    let ordersMap = orders |> Seq.map (fun order -> order.id, order) |> Map.ofSeq  // ofSeq transforma a sequência (chave, valor) em um map (chave, valor)
+
+    let orderItemsWithOrderInfo =
+        ETL.Calculations.joinOrderWithItems ordersMap orderItems
 
     printfn "Orders: %d" orders.Length
     printfn "First order: %A" orders.Head

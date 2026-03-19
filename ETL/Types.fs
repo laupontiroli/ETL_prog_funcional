@@ -32,3 +32,13 @@ type Output = {
     total_amount: float
     total_tax: float
 } 
+
+type OrderItemWithOrderInfo = {
+    order_id: int
+    product_id: int
+    quantity: int
+    price: float
+    tax: float
+    status: Status
+    origin: Origin
+}

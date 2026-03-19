@@ -47,3 +47,11 @@ module Calculations =
         |> Seq.filter (fun item -> item.order_id = order_id)
         |> Seq.map (fun item -> float item.quantity * item.tax * item.price)
         |> Seq.fold (+) 0.0
+
+    let joinOrderWithItems (orders: Map<int, Order>) (orderItems: OrderItem list) : OrderItemWithOrderInfo list =
+        orderItems
+        |> Seq.map (fun item ->
+            let order = orders.[item.order_id]
+            { order_id = order.id; product_id = item.product_id; quantity = item.quantity; price = item.price; tax = item.tax; status = order.status; origin = order.origin }
+        )
+        |> Seq.toList
