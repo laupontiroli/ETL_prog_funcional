@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "nxxVw3NmUR8=",
+  "success": true,
+  "projectFilePath": "/workspaces/ETL_prog_funcional/Main/Main.fsproj",
+  "expectedPackageFiles": [
+    "/home/vscode/.nuget/packages/fsharp.core/9.0.303/fsharp.core.9.0.303.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data/8.1.0/fsharp.data.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.csv.core/8.1.0/fsharp.data.csv.core.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.html.core/8.1.0/fsharp.data.html.core.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.http/8.1.0/fsharp.data.http.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.json.core/8.1.0/fsharp.data.json.core.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.runtime.utilities/8.1.0/fsharp.data.runtime.utilities.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.worldbank.core/8.1.0/fsharp.data.worldbank.core.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/fsharp.data.xml.core/8.1.0/fsharp.data.xml.core.8.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

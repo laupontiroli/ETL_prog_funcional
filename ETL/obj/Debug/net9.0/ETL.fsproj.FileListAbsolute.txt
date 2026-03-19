@@ -1,0 +1,14 @@
+/workspaces/ETL_prog_funcional/ETL/bin/Debug/net9.0/ETL.deps.json
+/workspaces/ETL_prog_funcional/ETL/bin/Debug/net9.0/ETL.dll
+/workspaces/ETL_prog_funcional/ETL/bin/Debug/net9.0/ETL.pdb
+/workspaces/ETL_prog_funcional/ETL/bin/Debug/net9.0/ETL.xml
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.fsproj.AssemblyReference.cache
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.AssemblyInfoInputs.cache
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.AssemblyInfo.fs
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.fsproj.CoreCompileInputs.cache
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.sourcelink.json
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.dll
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/refint/ETL.dll
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.xml
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ETL.pdb
+/workspaces/ETL_prog_funcional/ETL/obj/Debug/net9.0/ref/ETL.dll
