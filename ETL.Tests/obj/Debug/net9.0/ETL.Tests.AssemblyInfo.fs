@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("ETL.Tests")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21ea82db810a8d2dc4a932573fd2e2112165fa07")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b47aa367c3b39d820cad288eb198158430cec7b9")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("ETL.Tests")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("ETL.Tests")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

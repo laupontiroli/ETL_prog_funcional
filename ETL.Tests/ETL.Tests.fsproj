@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Tests.fs" />
+    <Compile Include="ParseStatusTests.fs" />
+    <Compile Include="ParseOriginTests.fs" />
+    <Compile Include="CalculationsTotalAmountTests.fs" />
+    <Compile Include="CalculationsTotalTaxTests.fs" />
+    <Compile Include="JoinOrderWithItemsTests.fs" />
+    <Compile Include="CalculateTotalAmountAndTaxByOrderIdTests.fs" />
+    <Compile Include="CalculateAverageTests.fs" />
+    <Compile Include="AverageTaxAndAmountByMonthTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
