@@ -2,5 +2,306 @@
 <doc>
 <assembly><name>ETL</name></assembly>
 <members>
+<member name="P:ETL.Types.AverageTaxAndAmount.year">
+<summary>
+ Ano de referência.
+</summary>
+</member>
+<member name="P:ETL.Types.AverageTaxAndAmount.month">
+<summary>
+ Mês de referência.
+</summary>
+</member>
+<member name="P:ETL.Types.AverageTaxAndAmount.average_amount">
+<summary>
+ Média dos valores no período.
+</summary>
+</member>
+<member name="P:ETL.Types.AverageTaxAndAmount.average_tax">
+<summary>
+ Média dos impostos no período.
+</summary>
+</member>
+<member name="T:ETL.Types.AverageTaxAndAmount">
+<summary>
+ Representa a média de imposto e valor agrupada por mês e ano.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.date">
+<summary>
+ Data do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.origin">
+<summary>
+ Origem do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.status">
+<summary>
+ Status do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.tax">
+<summary>
+ Taxa aplicada sobre o produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.price">
+<summary>
+ Preço unitário do produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.quantity">
+<summary>
+ Quantidade do produto no item.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.product_id">
+<summary>
+ Identificador do produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItemWithOrderInfo.order_id">
+<summary>
+ Identificador do pedido.
+</summary>
+</member>
+<member name="T:ETL.Types.OrderItemWithOrderInfo">
+<summary>
+ Representa um item de pedido enriquecido com informações do pedido pai (inner join).
+</summary>
+</member>
+<member name="P:ETL.Types.Output.total_tax">
+<summary>
+ Soma total dos impostos do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.Output.total_amount">
+<summary>
+ Soma total do valor dos itens do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.Output.order_id">
+<summary>
+ Identificador do pedido.
+</summary>
+</member>
+<member name="T:ETL.Types.Output">
+<summary>
+ Representa o resultado agregado de um pedido com total de valor e imposto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItem.tax">
+<summary>
+ Taxa aplicada sobre o produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItem.price">
+<summary>
+ Preço unitário do produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItem.quantity">
+<summary>
+ Quantidade do produto no item.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItem.product_id">
+<summary>
+ Identificador do produto.
+</summary>
+</member>
+<member name="P:ETL.Types.OrderItem.order_id">
+<summary>
+ Identificador do pedido ao qual o item pertence.
+</summary>
+</member>
+<member name="T:ETL.Types.OrderItem">
+<summary>
+ Representa um item pertencente a um pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.Order.origin">
+<summary>
+ Origem do pedido (online ou físico).
+</summary>
+</member>
+<member name="P:ETL.Types.Order.status">
+<summary>
+ Status atual do pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.Order.order_date">
+<summary>
+ Data em que o pedido foi realizado.
+</summary>
+</member>
+<member name="P:ETL.Types.Order.client_id">
+<summary>
+ Identificador do cliente associado ao pedido.
+</summary>
+</member>
+<member name="P:ETL.Types.Order.id">
+<summary>
+ Identificador único do pedido.
+</summary>
+</member>
+<member name="T:ETL.Types.Order">
+<summary>
+ Representa um pedido realizado por um cliente.
+</summary>
+</member>
+<member name="T:ETL.Types.Origin.P">
+<summary>
+ Pedido originado em loja física.
+</summary>
+</member>
+<member name="T:ETL.Types.Origin.O">
+<summary>
+ Pedido originado online.
+</summary>
+</member>
+<member name="T:ETL.Types.Origin">
+<summary>
+ Representa a origem de um pedido.
+</summary>
+</member>
+<member name="T:ETL.Types.Status.Cancelled">
+<summary>
+ Pedido cancelado.
+</summary>
+</member>
+<member name="T:ETL.Types.Status.Complete">
+<summary>
+ Pedido concluído com sucesso.
+</summary>
+</member>
+<member name="T:ETL.Types.Status.Pending">
+<summary>
+ Pedido aguardando processamento.
+</summary>
+</member>
+<member name="T:ETL.Types.Status">
+<summary>
+ Representa o status de um pedido.
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculateAverageTaxAndAmountByMonthAndYear(Microsoft.FSharp.Collections.FSharpList{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Agrupa os itens por mês e ano e calcula a média de imposto e valor para cada período,
+ retornando uma lista de &lt;c&gt;AverageTaxAndAmount&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculateAverageAmount(System.Collections.Generic.IEnumerable{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Calcula a média dos preços de uma sequência de itens de pedido.
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculateAverageTax(System.Collections.Generic.IEnumerable{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Calcula a média das taxas de uma sequência de itens de pedido.
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculatetotalAmountAndTaxByOrderId(Microsoft.FSharp.Collections.FSharpList{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Agrupa os itens por pedido e calcula o total de valor e imposto de cada pedido,
+ retornando uma lista de &lt;c&gt;Output&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Calculations.joinOrderWithItems(Microsoft.FSharp.Collections.FSharpMap{System.Int32,ETL.Types.Order},Microsoft.FSharp.Collections.FSharpList{ETL.Types.OrderItem})">
+<summary>
+ Realiza um inner join entre pedidos e itens, produzindo uma lista de &lt;c&gt;OrderItemWithOrderInfo&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculateTotalTax(System.Int32,System.Collections.Generic.IEnumerable{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Calcula o imposto total dos itens de um pedido específico (quantidade × taxa × preço).
+</summary>
+</member>
+<member name="M:ETL.Calculations.calculateTotalAmount(System.Int32,System.Collections.Generic.IEnumerable{ETL.Types.OrderItemWithOrderInfo})">
+<summary>
+ Calcula o valor total dos itens de um pedido específico (quantidade × preço).
+</summary>
+</member>
+<member name="M:ETL.Calculations.round2(System.Double)">
+<summary>
+ Arredonda um valor &lt;c&gt;float&lt;/c&gt; para 2 casas decimais.
+</summary>
+</member>
+<member name="T:ETL.Calculations">
+<summary>
+ Funções de cálculo e agregação sobre os dados de pedidos.
+</summary>
+</member>
+<member name="M:ETL.Transformations.rowToOrderItem(FSharp.Data.CsvRow)">
+<summary>
+ Transforma uma linha CSV em um registro &lt;c&gt;OrderItem&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Transformations.rowToOrder(FSharp.Data.CsvRow)">
+<summary>
+ Transforma uma linha CSV em um registro &lt;c&gt;Order&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Transformations.parseOrigin(System.String)">
+<summary>
+ Converte uma string de origem CSV no tipo discriminado &lt;c&gt;Origin&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Transformations.parseStatus(System.String)">
+<summary>
+ Converte uma string de status CSV no tipo discriminado &lt;c&gt;Status&lt;/c&gt;.
+</summary>
+</member>
+<member name="M:ETL.Transformations.parseFilterOrigin(System.String)">
+<summary>
+ Converte uma string de argumento CLI no tipo &lt;c&gt;Origin&lt;/c&gt; para uso como filtro.
+ Levanta exceção para valores inválidos ou ausentes.
+</summary>
+</member>
+<member name="M:ETL.Transformations.parseFilterStatus(System.String)">
+<summary>
+ Converte uma string de argumento CLI no tipo &lt;c&gt;Status&lt;/c&gt; para uso como filtro.
+ Levanta exceção para valores inválidos ou ausentes.
+</summary>
+</member>
+<member name="T:ETL.Transformations">
+<summary>
+ Funções de transformação e parsing de dados CSV para os tipos de domínio.
+</summary>
+</member>
+<member name="M:ETL.ExternalFunctions.Output.WriteDBOutput(System.Collections.Generic.IEnumerable{ETL.Types.Output})">
+<summary>
+ Persiste uma sequência de &lt;c&gt;Output&lt;/c&gt; na tabela &lt;c&gt;output&lt;/c&gt; do banco SQLite
+ em &lt;c&gt;DataOut/output.db&lt;/c&gt;, criando a tabela se necessário.
+</summary>
+</member>
+<member name="M:ETL.ExternalFunctions.Output.WriteCSVOutput``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+<summary>
+ Serializa qualquer sequência de registros F# em um arquivo CSV,
+ usando reflexão para inferir o cabeçalho e os valores das colunas.
+</summary>
+</member>
+<member name="T:ETL.ExternalFunctions.Output">
+<summary>
+ Funções de escrita dos resultados em CSV ou banco de dados SQLite.
+</summary>
+</member>
+<member name="M:ETL.ExternalFunctions.Input.loadOrderItems(System.String)">
+<summary>
+ Carrega uma lista de &lt;c&gt;OrderItem&lt;/c&gt; a partir de um arquivo ou URL CSV.
+</summary>
+</member>
+<member name="M:ETL.ExternalFunctions.Input.loadOrders(System.String)">
+<summary>
+ Carrega uma lista de &lt;c&gt;Order&lt;/c&gt; a partir de um arquivo ou URL CSV.
+</summary>
+</member>
+<member name="T:ETL.ExternalFunctions.Input">
+<summary>
+ Funções de leitura de arquivos CSV (local ou via HTTP).
+</summary>
+</member>
 </members>
 </doc>

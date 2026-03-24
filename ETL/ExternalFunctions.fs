@@ -3,21 +3,27 @@ namespace ETL.ExternalFunctions
 open FSharp.Data
 open ETL.Types
 
+/// Funções de leitura de arquivos CSV (local ou via HTTP).
 module Input =
 
+    /// Carrega uma lista de <c>Order</c> a partir de um arquivo ou URL CSV.
     let loadOrders(path: string) : Order list =
         CsvFile.Load(path).Rows
         |> Seq.map ETL.Transformations.rowToOrder
         |> Seq.toList
 
+    /// Carrega uma lista de <c>OrderItem</c> a partir de um arquivo ou URL CSV.
     let loadOrderItems(path: string) : OrderItem list =
         CsvFile.Load(path).Rows
         |> Seq.map ETL.Transformations.rowToOrderItem
         |> Seq.toList
 
 
+/// Funções de escrita dos resultados em CSV ou banco de dados SQLite.
 module Output =
 
+    /// Serializa qualquer sequência de registros F# em um arquivo CSV,
+    /// usando reflexão para inferir o cabeçalho e os valores das colunas.
     let WriteCSVOutput (output: 'a seq) (path: string) : unit =
         let t = typeof<'a>
         let fields = Microsoft.FSharp.Reflection.FSharpType.GetRecordFields(t)
@@ -31,6 +37,8 @@ module Output =
         System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path)) |> ignore
         System.IO.File.WriteAllLines(path, Seq.append [header] rows)
 
+    /// Persiste uma sequência de <c>Output</c> na tabela <c>output</c> do banco SQLite
+    /// em <c>DataOut/output.db</c>, criando a tabela se necessário.
     let WriteDBOutput (output: Output seq) : unit =
         let dbPath = System.IO.Path.Combine(__SOURCE_DIRECTORY__, "..", "DataOut", "output.db")
         System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(dbPath)) |> ignore
