@@ -50,6 +50,11 @@
               "target": "Package",
               "version": "[8.1.0, )",
               "generatePathProperty": true
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.5, )",
+              "generatePathProperty": true
             }
           },
           "imports": [

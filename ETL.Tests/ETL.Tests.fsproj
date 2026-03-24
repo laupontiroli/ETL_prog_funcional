@@ -9,6 +9,11 @@
   <ItemGroup>
     <Compile Include="ParseStatusTests.fs" />
     <Compile Include="ParseOriginTests.fs" />
+    <Compile Include="ParseFilterStatusTests.fs" />
+    <Compile Include="ParseFilterOriginTests.fs" />
+    <Compile Include="RowToOrderTests.fs" />
+    <Compile Include="RowToOrderItemTests.fs" />
+    <Compile Include="Round2Tests.fs" />
     <Compile Include="CalculationsTotalAmountTests.fs" />
     <Compile Include="CalculationsTotalTaxTests.fs" />
     <Compile Include="JoinOrderWithItemsTests.fs" />

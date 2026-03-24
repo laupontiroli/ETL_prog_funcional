@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nxxVw3NmUR8=",
+  "dgSpecHash": "q34zZexfoJ4=",
   "success": true,
   "projectFilePath": "/workspaces/ETL_prog_funcional/Main/Main.fsproj",
   "expectedPackageFiles": [
@@ -12,7 +12,14 @@
     "/home/vscode/.nuget/packages/fsharp.data.json.core/8.1.0/fsharp.data.json.core.8.1.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/fsharp.data.runtime.utilities/8.1.0/fsharp.data.runtime.utilities.8.1.0.nupkg.sha512",
     "/home/vscode/.nuget/packages/fsharp.data.worldbank.core/8.1.0/fsharp.data.worldbank.core.8.1.0.nupkg.sha512",
-    "/home/vscode/.nuget/packages/fsharp.data.xml.core/8.1.0/fsharp.data.xml.core.8.1.0.nupkg.sha512"
+    "/home/vscode/.nuget/packages/fsharp.data.xml.core/8.1.0/fsharp.data.xml.core.8.1.0.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.data.sqlite/10.0.5/microsoft.data.sqlite.10.0.5.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.data.sqlite.core/10.0.5/microsoft.data.sqlite.core.10.0.5.nupkg.sha512",
+    "/home/vscode/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.11/sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/vscode/.nuget/packages/sqlitepclraw.core/2.1.11/sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "/home/vscode/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.11/sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/vscode/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.11/sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/vscode/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

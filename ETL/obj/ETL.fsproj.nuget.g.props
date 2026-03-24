@@ -13,6 +13,7 @@
     <SourceRoot Include="/home/vscode/.nuget/packages/" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_Data_Sqlite Condition=" '$(PkgMicrosoft_Data_Sqlite)' == '' ">/home/vscode/.nuget/packages/microsoft.data.sqlite/10.0.5</PkgMicrosoft_Data_Sqlite>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/home/vscode/.nuget/packages/fsharp.core/9.0.303</PkgFSharp_Core>
     <PkgFSharp_Data Condition=" '$(PkgFSharp_Data)' == '' ">/home/vscode/.nuget/packages/fsharp.data/8.1.0</PkgFSharp_Data>
   </PropertyGroup>

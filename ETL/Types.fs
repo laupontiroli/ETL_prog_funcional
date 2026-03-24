@@ -10,6 +10,7 @@ type Origin =
     | O
     | P
 
+
 type Order = {
 
     id: int
@@ -41,4 +42,12 @@ type OrderItemWithOrderInfo = {
     tax: float
     status: Status
     origin: Origin
+    date: System.DateTime
+}
+
+type AverageTaxAndAmount = {
+    average_tax: float
+    average_amount: float
+    month: int
+    year: int
 }
